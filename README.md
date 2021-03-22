@@ -17,17 +17,17 @@ $ nix flake init -t github:dramforever/flake-templates#minimal-package
 
 ## What does this do?
 
-We distribute our own derivations, NixOS modules, overlays, etc. with Flakes. At
-least, this seems to be a future direction. The author of this repository, me,
-likes writing my small flakes in certain ways.
-
-This repository is a showcase of a few Flake-related patterns I've gathered.
-
-Projects like [devos] are too large to be a showcase of *just* flakes. They are
-what I would describe as full-fledged templates. Instead, this repository just
-contains the *Flake* part of the patterns.
+Nix Flake users distribute derivations, NixOS modules, overlays, etc. with
+Flakes in a decentralized way. There are flakes like [devos], which are
+full-fledged Flakes that configure entire systems. But there should also be
+'small Flakes' which are things like single packages or small package sets,
+individual or several closely-related NixOS modules, and tiny development
+environments
 
 [devos]: https://github.com/divnix/devos
+
+This repository is a showcase of a few Flake-related patterns I've gathered when
+writing small Flakes.
 
 ## The templates
 
