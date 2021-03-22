@@ -31,7 +31,7 @@ contains the *Flake* part of the patterns.
 
 ## The templates
 
-### `minimal-package`
+### `minimal-package` [(link)](minimal-package)
 
 An example of a single-package flake. From a single package 'definition' file
 `hello-flake/default.nix`, which is suited for `callPackage`, we derive the
@@ -51,7 +51,7 @@ We use [flake-utils] to generate these outputs for all the default systems.
 [flake-utils]: https://github.com/numtide/flake-utils
 
 This might be considered a bit excessive, but these are largely one-time jobs.
-With this templates, you don't even have to figure out how to write it. You just
+With this template, you don't even have to figure out how to write it. You just
 need to do a find and replace.
 
 Technically, if the package name identifies the name of the executable, the
