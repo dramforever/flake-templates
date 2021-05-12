@@ -59,3 +59,39 @@ Technically, if the package name identifies the name of the executable, the
 
 This could be easily extended to multiple small packages, or a 'main' package
 with several dependencies.
+
+### `magic-overlay` [(link)](magic-overlay)
+
+If you have a flake consisting of multiple packages in a very regular structure,
+such as like this:
+
+```plain
+pkgs/
+  foo/
+    default.nix
+  bar/
+    default.nix
+
+flake.nix
+```
+
+And your package set is like (example given as an overlay):
+
+```
+final: prev: {
+  foo = final.callPackage ./pkgs/foo {};
+  bar = final.callPackage ./pkgs/bar {};
+}
+```
+
+You can save yourself some time when adding or removing packages by using the
+`builtins.readDir` function of Nix to automagically. I gave this pattern a name
+'magic overlay'. Implemention in `flake.nix`. It's pretty simple and you can
+adapt this to your needs relatively easily. Play around in `nix repl` and have
+fun!
+
+Possible pitfall: If you are using Git or other VCS, You need to make sure to
+`git add` your new files or something equivalent, otherwise the flake would be
+evaluated without the new file. This is a pitfall for flakes in general, but
+with magic overlays, instead of failing, the evaluation would succeed but
+without seeing the new package.
