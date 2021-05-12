@@ -1,5 +1,5 @@
 {
-  description = "An example of a package set using a magic overlay";
+  description = "An example package set using a magic overlay";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   inputs.flake-utils.url = "github:numtide/flake-utils";
