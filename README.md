@@ -9,10 +9,10 @@ github:dramforever/flake-templates
 ```
 
 To initialize your projects using the provided templates, for example using the
-`minimal-package` template, use this command:
+`single-package` template, use this command:
 
 ```console
-$ nix flake init -t github:dramforever/flake-templates#minimal-package
+$ nix flake init -t github:dramforever/flake-templates#single-package
 ```
 
 ## What does this do?
@@ -31,7 +31,7 @@ writing small Flakes.
 
 ## The templates
 
-### `minimal-package` [(link)](minimal-package)
+### `single-package` [(link)](single-package)
 
 An example of a single-package flake. From a single package 'definition' file
 `hello-flake/default.nix`, which is suited for `callPackage`, we derive the

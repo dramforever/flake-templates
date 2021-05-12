@@ -1,4 +1,4 @@
-# minimal-package
+# single-package
 
 ## Nix Flake
 

@@ -3,9 +3,9 @@
 
   outputs = { self }: {
     templates = {
-      minimal-package = {
-        path = ./minimal-package;
-        description = "A minimal package flake";
+      single-package = {
+        path = ./single-package;
+        description = "A package flake with a single package";
       };
     };
   };
