@@ -31,6 +31,10 @@ writing small Flakes.
 
 ## The templates
 
+### `dev` [(link)](dev)
+
+A Nix Flake development shell minimal starter.
+
 ### `single-package` [(link)](single-package)
 
 An example of a single-package flake. From a single package 'definition' file

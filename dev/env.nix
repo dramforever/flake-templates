@@ -1,0 +1,6 @@
+{ mkShell }:
+
+mkShell {
+  buildInputs = [ ];
+  nativeBuildInputs = [ ];
+}
