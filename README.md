@@ -35,6 +35,18 @@ writing small Flakes.
 
 A Nix Flake development shell minimal starter.
 
+Environment definition is separated out into a `env.nix` file, and the two
+wrappers, `flake.nix` and `shell.nix` allow for compatibility with both `nix
+develop` and `nix-shell`.
+
+Contains a `.envrc` for [nix-direnv] support.
+
+[nix-direnv]: https://github.com/nix-community/nix-direnv
+
+### `cross` [(link)](cross)
+
+Like `dev`, but with cross compilation.
+
 ### `single-package` [(link)](single-package)
 
 An example of a single-package flake. From a single package 'definition' file
