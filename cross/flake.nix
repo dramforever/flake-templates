@@ -1,5 +1,5 @@
 {
-  description = "Nix Flake cross-compilation development shell minimal starter template";
+  description = "Cross-compilation development shell starter";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 

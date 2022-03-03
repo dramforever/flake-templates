@@ -2,16 +2,20 @@
   description = "Flake templates from dramforever";
 
   outputs = { self }: {
-    templates = {
-      single-package = {
-        path = ./single-package;
-        description = "An example single-package flake";
-      };
-
-      magic-overlay = {
-        path = ./magic-overlay;
-        description = "An example package set using a magic overlay";
-      };
-    };
+    templates =
+      with builtins;
+      let
+        dirContents = readDir ./.;
+        names = filter (name: dirContents.${name} == "directory") (attrNames dirContents);
+        gen = name:
+          {
+            inherit name;
+            value = {
+              path = ./${name};
+              description = (import ./${name}/flake.nix).description;
+            };
+          };
+      in
+        listToAttrs (map gen names);
   };
 }
